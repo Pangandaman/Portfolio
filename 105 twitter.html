@@ -1,0 +1,478 @@
+<DOCTYPE! html>
+    <head>
+        <link rel="apple-touch-icon" href="twitter.png">
+        <link rel="shortcut icon" type="image" href="twitter.ico">
+        <title>Twitter</title>
+
+        <style>
+            body{
+                background-color: white;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif }
+
+            .vacation img{
+                height: 200px;
+                width: 150px;
+                border-radius: 0;
+            }
+.container{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-color: white;
+
+}
+.container1{
+flex-direction: column;
+background-color: rgb(252, 252, 252);
+width:30%;
+}
+.container3{
+    width:50%;
+flex-direction: column;
+background-color: rgb(255, 255, 255);
+margin: 5px;
+}
+
+.container2{
+width:60%;
+flex-grow: 2;
+
+}
+.item{
+    flex-grow: 1;
+}
+h2{
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+.button1{
+    padding: 20px;
+    background-color: rgb(29, 104, 243);
+    color: white;
+    border-radius: 30px;
+    width: 200px;
+    margin-left:30px;
+}
+.button2{
+    padding: 5px;
+    background-color: rgb(29, 104, 243);
+    color: white;
+    border-radius: 25%;
+    margin: 10px;
+}
+.profile img{
+    border-radius: 70%;
+    padding: 10px;
+}
+.home img{
+    float: right;
+
+}
+.home{
+background-color: #f1f1f1;
+padding: 12px;
+border-radius: 10px;
+ 
+}
+
+
+/* Primary Tweet button */
+.button1 {
+    padding: 15px;
+    background-color: rgb(29, 104, 243);
+    color: white;
+    border-radius: 30px;
+    width: 200px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.button1:hover {
+    background-color: rgb(26, 92, 213);
+}
+
+/* Secondary Tweet button */
+.button2 {
+    padding: 10px;
+    background-color: rgb(29, 104, 243);
+    color: white;
+    border-radius: 25%;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.button2:hover {
+    background-color: rgb(26, 92, 213);
+}
+
+/* Search button */
+.search button {
+    padding: 15px;
+    background-color: rgb(29, 104, 243);
+    color: white;
+    border-radius: 30px;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+}
+
+.search button:hover {
+    background-color: rgb(26, 92, 213);
+}
+
+/* Show more link */
+.showmore {
+    text-decoration: none;
+    color: rgb(29, 104, 243);
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.showmore:hover {
+    text-decoration: underline;
+}
+/* .home h3{
+    font-style: bold;
+    padding: 2px;
+} */
+
+#vacation img{
+height: 300px;
+width: 400px;
+  border-radius: 8px;
+}
+
+
+.smallicons{
+    width: 50px;
+    height: 50px;
+}
+.status-post {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+    margin: 1px;
+}
+
+.status-header {
+    display: flex;
+    align-items: center;
+    
+}
+
+.status-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.status-username {
+    font-weight: bold;
+
+}
+
+.status-content textarea {
+    width: 50%;
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 1px;
+    font-size: 5px;
+}
+
+.status-actions {
+    margin-top: 10px;
+}
+
+.assign-icon {
+  cursor: pointer;
+  color: #007bff; /* Blue color for the icon */
+  font-size: 24px;
+}
+
+.sidepanel img{
+    width: 20px;
+    height: 20px;
+    padding-right: 12px; 
+}
+.statusicons img{
+    width: 20px;
+    height: 20px;
+    padding-right: 12px; 
+}
+
+.retweet img{
+    width: 20px;
+    height: 20px;
+    padding-right: 12px;
+    margin: 20px; 
+}
+
+.search{
+    float: center;
+    cursor: pointer;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 10px 15px;
+  color: #e9e9e9;
+  transition: background-color 0.3s ease;
+
+}
+
+.statusbar{
+    background-color: white;
+  
+}
+.Hashtags p{
+    font-weight: 20px;
+    font-style: bold;
+    font-size: 12px;
+    color: black;
+}
+.litext p{
+
+    font-style: bold;
+    font-size: 10px;
+    color: rgb(77, 76, 76);
+  
+}
+
+.rightpicture img{
+ background-image: cover;
+    border-radius: 0;
+    
+}
+
+.showmore{
+    text-align: left;
+    text-decoration: none;
+    float: left;
+}
+</style>
+
+    </head>
+<body>
+    <a href="index.html">Go back</a>
+<div class="container">
+    <div class="container1 item">
+<h1><img  src="twitter.png" style="width: 9%; height: 4%;"></h1>
+<div class="sidepanel">
+<h2>   <img class  src="user.jpg" alt="User Profile Picture">Home</h2>
+<h2>   <img src="user.jpg" alt="User Profile Picture">Notifications</h2>
+<h2>   <img src="user.jpg" alt="User Profile Picture">Messages</h2>
+<h2>   <img src="user.jpg" alt="User Profile Picture">Bookmarks</h2>
+<h2>   <img src="user.jpg" alt="User Profile Picture">List</h2>
+<h2>   <img src="user.jpg" alt="User Profile Picture">Profile</h2>
+<h2>   <img src="user.jpg" alt="User Profile Picture">More</h2>
+<div class="buttonstatus">
+ 
+<button class="button1">Tweet</button>
+</div>
+</div>
+    </div>
+   
+    <div class="container2">
+<div class="statusbar">
+<h3>Home</h3>
+<hr>
+</div>
+<div class="profile">
+   <div class="status-post"> 
+        <div class="status-header" style="background-color: white;">
+        <img src="user.jpg" alt="User Profile Picture">
+        <h3>What's happening?</h3>
+        </div>
+        <div class="statusicons" style="background-color: white;">
+        <img src="user.jpg" alt="User Profile Picture">
+        <img src="user.jpg" alt="User Profile Picture">
+        <img src="user.jpg" alt="User Profile Picture">
+        <img src="user.jpg" alt="User Profile Picture">
+  
+        <button class="button1" style="float:right; width: 90px; padding: 10px; margin-bottom: 10px;">Tweet</button>
+       
+        <div class="status-post">
+            <div class="status-header">
+            <img src="user.jpg" alt="User Profile Picture">
+            <div class="status-username" style="color: #c3c3c3"><b style="color: black">Brie</b> @Sktch_Comedyfan  3m</p></div>
+            </div>
+            <div class="status-content" style="padding: 12px">
+   <p>Giving standup comedy a go. Open mic starts at 7,hit me up if you want <br>ticket <b style="color:rgb(29, 104, 243)">#heregoesnothing</b></p>
+    <div class="retweet" style="background-color: white;">
+        <img src="user.jpg" alt="User Profile Picture">
+        <img src="user.jpg" alt="User Profile Picture">
+        <img src="user.jpg" alt="User Profile Picture">
+        <img src="user.jpg" alt="User Profile Picture">
+        </div>          
+</div>
+<hr>
+    </div>
+    <div class="status-post">
+        <div class="status-header">
+        <img src="user.jpg" alt="User Profile Picture">
+        <div class="status-username" style="color: #c3c3c3"><b style="color: black">Harold</b> @h_wang88   10m</p></div>
+        </div>
+        <div class="status-content" style="padding: 12px">
+<p>Vacation is going great.</p>
+<div id="vacation">
+    <img src="vacation.jpg" alt="Paris" width="300" height="300">
+</div>
+<div class="retweet" style="background-color: white;">
+    <img src="user.jpg" alt="User Profile Picture">
+    <img src="user.jpg" alt="User Profile Picture">
+    <img src="user.jpg" alt="User Profile Picture">
+    <img src="user.jpg" alt="User Profile Picture">
+    </div>          
+</div>
+<hr>
+</div>
+<div class="status-post">
+    <div class="status-header">
+    <img src="user.jpg" alt="User Profile Picture">
+    <div class="status-username" style="color: #c3c3c3"><b style="color: black">andrea</b> @andy_landerson  3m</p></div>
+    </div>
+    <div class="status-content" style="padding: 12px">
+    <p>how many lemons do i need to make lemonade?</p>
+</div>
+
+<div class="retweet" style="background-color: white;">
+<img src="user.jpg" alt="User Profile Picture">
+<img src="user.jpg" alt="User Profile Picture">
+<img src="user.jpg" alt="User Profile Picture">
+<img src="user.jpg" alt="User Profile Picture">
+</div>          
+</div>
+<hr>
+</div>
+    </div>
+
+
+</div>
+</div>
+
+
+    <div class="container3 item">
+        <div class="search">
+
+       
+        <input type="text" id="searchInput" class="form-control" style="padding: 15px; border-radius: 25px; width: 100%; background-color: #e4e4e4; " placeholder="Search Twitter">
+    </div>
+        <div class="home">
+            <div class="statusicons" float="right">
+                <img src="user.jpg" alt="User Profile Picture">
+                    </div>  
+        <h3>Trends for you</h3>
+          
+        
+        <div class="content">
+        <div class="litext">
+            <p>Trending Worldwide</p>
+        </div>
+        <div class="hashtags">
+            <p>#BreakingNews</p>
+            <div class="status-post"  style="border-radius: 20px;"> 
+                <div class="status-header">
+                    <div class="litext">
+                        <p style="margin-bottom:60px; margin-left:30px;">Space</p>
+                    </div>
+                    <div class="hashtags">
+                        <p style="font-size: 15px; margin-right:50px;">Lunar photography improves the<br>discovery of the moon</p>
+                            
+                        </div>
+                    <div class="rightpicture">
+                <img src="moon.jpg" alt="User Profile Picture">
+            </div>
+            
+                </div>
+            
+            </div>
+            <div class="litext">
+                <p>10,094 people are Tweeting about this</p>
+            <hr>
+            </div>
+            <div class="litext">
+                <p>Trending Worldwide</p>
+            </div>
+            <div class="hashtags">
+                <p>#WorldNews</p>
+                <div class="status-post"  style="border-radius: 20px; border: 1px solid #e7e5e5;"> 
+                    <div class="status-header">
+                        <div class="litext">
+                            <p style="margin-left:30px;">125K Tweets</p>
+                            <p style="margin-bottom:60px; margin-left:30px;">5,094 people are Tweeting about this</p>
+                        </div>
+                       <hr>
+                        <div class="hashtags">
+                            
+                                
+                            </div>
+                        <div class="rightpicture">
+                   
+                </div>
+                
+                    </div>
+                
+                </div>
+                
+                <hr>
+                
+                <div class="litext">
+                    <p>Trending Worldwide</p>
+                </div>
+                <div class="hashtags">
+                    <p>#BreakingNews</p>
+                    <div class="status-post"  style="border-radius: 20px;"> 
+                        <div class="status-header">
+                            <div class="litext">
+                                <p style="margin-bottom:60px; margin-left:30px;">Animals</p>
+                            </div>
+                            <div class="hashtags">
+                                <p style="font-size: 15px; margin-right:50px;">These cats are ready for #InternationalCatDay</p>
+                                    
+                                </div>
+                            <div class="rightpicture">
+                        <img src="moon.jpg" alt="User Profile Picture">
+                    </div>
+                    
+                        </div>
+                    
+                    </div>
+                    <div class="litext">
+                        <p>2,757 people are Tweeting about this</p>
+                    <hr>
+                    </div>
+                    <div class="litext">
+                        <p>Trending Worldwide</p>
+                    </div>
+                    <div class="hashtags">
+                        <p>#GreatestOfAllTime</p>
+                        <div class="status-post"  style="border-radius: 20px;  border: 1px solid #e7e5e5;"> 
+                            <div class="status-header">
+                                <div class="litext">
+                                    <p style="margin-left:30px;">100K Tweets</p>
+                                    <p style="margin-bottom:60px; margin-left:30px;">4,123 people are Tweeting about this</p>
+                                </div>
+                               <hr>
+                                <div class="hashtags">
+                                    
+                                        
+                                    </div>
+                                
+                                </div>
+                 
+                            </div>
+                            
+                            <a class="showmore" href="" style="color:rgb(29, 104, 243);">Show more</a>
+                        </div>
+
+</div>
+<div class="home">
+    <h3>Who to follow</h3>
+    <hr>
+    </div>
+</body>
+</html>
