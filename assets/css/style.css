@@ -41,12 +41,13 @@ body {
 }
 
 .home, .about, .skills, .portfolio, .contact {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .home {
-    text-align: center;
-    padding: 50px 0;
+    height: 100vh;
+    background-image: url(../img/backg.jpg); /* Use ../ to go up one level */
+    background-color: #fff;
 }
 
 .home h1 {
@@ -175,10 +176,10 @@ body {
 
 .contact {
     display: flex;
-    gap: 20px;
     background-color: #212121;
     padding: 20px;
     border-radius: 10px;
+    gap: 20px;
 }
 
 .contact .left {

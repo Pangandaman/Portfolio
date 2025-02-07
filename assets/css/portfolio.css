@@ -6,7 +6,7 @@
 
 body {
     background-color: #121212;
-    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-family: 'MarkPro', 'Helvetica', 'Arial', sans-serif;
     color: white;
 }
 
@@ -15,50 +15,95 @@ body {
     flex-direction: column;
     width: 100%;
     max-width: 1200px;
+    padding: 30px; /* Increased padding for better breathing space */
     margin: 0 auto;
-    padding: 20px;
 }
 
 .navigation {
     display: flex;
     justify-content: center;
     background-color: #212121;
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    list-style: none;
+    gap: 40px; /* Increased gap between navigation items */
 }
 
 .navigation ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .navigation a {
     text-decoration: none;
-    color: white;
+    color: #888; /* Default color for links */
     font-weight: bold;
+    font-size: 1.2rem; /* Slightly increase the font size for readability */
+    position: relative;
 }
 
-.home, .about, .skills, .portfolio, .contact {
-    margin-bottom: 40px;
+.navigation a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: white;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
 }
 
+.navigation a:hover::after {
+    width: 100%;
+    left: 0;
+    background: white;
+}
+
+.navigation a:hover {
+    color: white; /* Bright link on hover */
+}
+
+.navigation a.active {
+    color: white; /* Bright link for active state */
+}
+
+section {
+    margin-bottom: 50px;
+}
 
 .home {
-    height: 100vh;
-    background-image: url(../assets/img/backg.jpg); /* Use ../ to go up one level */
+    background-image: url(../img/spotlight.jpg);
     background-color: #fff;
+    background-size: cover; /* Ensure the background image covers the entire area without stretching */
     border-bottom: 2px dotted gray;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2% 0; /* Adjust padding for the home section to give more space vertically */
 }
 
 .home h1 {
-    font-size: 3rem;
+    font-size: 20rem;
     margin-bottom: 20px;
+    font-family: 'Impact', 'Arial Black', 'Helvetica', 'Arial', sans-serif;
 }
 
 .home p {
     font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.about, .skills, .portfolio, .contact {
+    padding: 20px;
+  margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .about {
@@ -70,10 +115,14 @@ body {
 .about img {
     width: 200px;
     border-radius: 10px;
+    margin-right: 30px; /* Extra margin on the right side */
+    width: 250px; /* Resize image for better balance with text */
+    border-radius: 10px;
 }
 
 .description-container {
     flex: 1;
+    margin-top: 20px; /* Better spacing between image and text */
 }
 
 .description h1 {
@@ -84,84 +133,54 @@ body {
 .description p {
     font-size: 1rem;
     line-height: 1.5;
-    margin-bottom: 20px;
 }
 
-.skills .intro {
+.skills .intro, .portfolio .intro {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
-.skills .intro h2 {
+.skills .intro h2, .portfolio .intro h2 {
     font-size: 2rem;
+    margin-bottom: 50px;
 }
 
-.list-container {
+.list-container, .port-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
 
-.skill-card {
+.skill-card, .port-card {
     background-color: #212121;
     padding: 20px;
     border-radius: 10px;
     width: calc(25% - 20px);
     text-align: center;
+    margin-bottom: 40px; /* Adding space between cards */
 }
 
-.skill-card img {
+.skill-card img, .port-card img {
     width: 50px;
     margin-bottom: 10px;
 }
 
-.skill-card h1 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.skill-card p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-.portfolio .intro {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.portfolio .intro h2 {
-    font-size: 2rem;
-}
-
-.port-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.port-card {
-    background-color: #212121;
-    padding: 20px;
-    border-radius: 10px;
-    width: calc(25% - 20px);
-    text-align: center;
-}
-
 .port-card img {
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    max-width: 300px; /* Adjust max-width as needed */
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
 }
 
-.port-card h3 {
+
+.skill-card h1, .port-card h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
-.port-card p {
+.skill-card p, .port-card p {
     font-size: 0.9rem;
     line-height: 1.5;
 }
@@ -184,17 +203,14 @@ body {
     border-radius: 10px;
 }
 
-.contact .left {
+.contact .left, .contact .right {
     flex: 1;
 }
 
 .contact .left h1 {
     font-size: 2rem;
     margin-bottom: 20px;
-}
-
-.contact .right {
-    flex: 1;
+    padding: 20px;
 }
 
 .contact .right p {
@@ -223,4 +239,29 @@ body {
 .footer a {
     text-decoration: none;
     color: white;
+}
+
+@media (max-width: 768px) {
+    .home h1 {
+        font-size: 3rem; /* Smaller font size for h1 */
+    }
+
+    .skill-card, .port-card {
+        width: 100%; /* Full-width cards on smaller screens */
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about img {
+        margin: 20px 0;
+        width: 200px; /* Resize image on mobile */
+    }
 }
