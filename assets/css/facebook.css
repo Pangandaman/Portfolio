@@ -1,0 +1,140 @@
+.body{
+                margin: 0;
+                padding: 0;
+ }
+
+.container{
+    display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-color: white;
+}
+
+
+/* LEFT CONTENT */
+.leftpanel{
+flex-grow: 1;
+flex-direction: column;
+background-color: #f1f1f1;
+
+}
+
+.profilename{
+  color: rgb(12, 11, 11);
+}
+.profilename a{
+  text-decoration: none;
+
+}
+.middlepanel{
+flex-grow: 2;
+flex-direction: column;
+background-color: #f1f1f1;
+flex-direction: row;
+flex-flow: nowrap;
+box-sizing: border-box;
+}
+
+.rightpanel{
+flex-grow: 1;
+flex-direction: column;
+background-color: #f1f1f1;
+
+}
+
+ 
+
+.sidenav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+.sidenav li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+.sidenav li a:hover {
+  background-color: #fcfcfc;
+  color: white;
+}
+
+.header{
+  background-color: rgb(247, 247, 247);
+  height: 40px;
+}
+
+#shortcuts{
+  color: rgb(87, 85, 85);
+}
+
+.footer{
+  position:fixed;
+
+}
+
+
+
+.middleicons{
+  align-items: center;
+
+}
+.stories {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+/* Center the Cards */
+.card {
+  border-radius: 10px;
+  padding: 10px;
+  height: 250px;
+  width: 130px;
+  margin: 5px;
+  background-color: #969696;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.statuspost{
+  border-radius: 10px;
+  background-color: rgb(155, 155, 155);
+  justify-content: center;
+  }
+
+.buttonz a{
+list-style: none;
+}
+
+.prefeed{
+  width: 100%;
+}
+
+.feed img{
+  height: 200px;
+  width: 150px;
+  border-radius: 0;
+}
+
+.name{
+  font-style: bold;
+color: black;
+display: flex;
+align-items: center;
+}
+
+.posted{
+  color:rgb(95, 95, 95);
+}
+
