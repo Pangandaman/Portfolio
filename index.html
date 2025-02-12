@@ -19,14 +19,15 @@
     
 </head>
 <body>
+
+
     <div class="navigation">
         <div class="logo" id="logo-toggle">
             <a href="#home">
-                <img src="/Portfolio//assets/img/mylogo1.png" alt="Logo">
+                <img src="/Portfolio/assets/img/mylogo1.png" alt="Logo">
             </a>
         </div>
-        <ul id="menu">
-            <!-- <li><a href="#home">Home</a></li> -->
+        <ul id="menu" class="hidden md:flex">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
@@ -36,10 +37,11 @@
 
     <!-- Load JavaScript at the end for better performance -->
     <script>
-        document.getElementById('logo-toggle').addEventListener('click', function() {
-            var menu = document.getElementById('menu');
-            menu.classList.toggle('hidden'); // Toggle menu visibility
-        });
+      document.getElementById('logo-toggle').addEventListener('click', function () {
+    var menu = document.getElementById('menu');
+    menu.classList.toggle('active'); // Toggle active class
+});
+
     </script>
 
 
@@ -207,12 +209,12 @@
 
             <div class="port-card">
                 <div class="space">
-                    <p id="chip">Ground Coffee Shop</p>
-                    <p style="color: yellow;">On-going</p>
+                    <p id="chip">Coffee E-Commerce Website</p>
+                    <p style="color: rgb(255, 243, 72);">On-going</p>
                 </div>
                 <img src="/Portfolio/assets/img/ground.JPG">
-                <h3>Twitter</h3>
-                <p>Twitter's front page attempt </p>
+                <h3></h3>
+                <p><b style="color: red;">GROUND</b> coffee</p>
                 <a href="twitter.html" id="view">View</a>
             </div>
 

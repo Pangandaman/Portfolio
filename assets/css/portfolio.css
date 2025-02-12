@@ -36,7 +36,7 @@ body {
     font-weight: bold;
     cursor: pointer;
     display: flex;
-    align-items: center;
+    align-items: left;
 }
 
 .navigation .logo img {
@@ -91,7 +91,7 @@ body {
     color: white;
 }
 
-/* Mobile Styles */
+/* Fix for mobile navigation */
 @media (max-width: 768px) {
     .navigation {
         padding: 10px 20px; /* Adjust padding for smaller screens */
@@ -119,20 +119,26 @@ body {
         transition: max-height 0.3s ease-in-out;
     }
 
-    .navigation.active ul {
-        max-height: 500px; /* Adjust max-height to show menu */
+    /* Show menu when active */
+    .navigation ul.active {
+        max-height: 500px; /* Adjust as needed */
     }
 
     .navigation a {
         font-size: 1rem; /* Adjust font size for smaller screens */
+        display: block;
+        padding: 10px 0;
     }
 }
+
 
 
 
 section {
     margin-bottom: 50px;
 }
+
+
 
 .home {
     background-image: url(../img/spotlight.jpg);
@@ -285,10 +291,13 @@ section {
 
     .icon-container {
         gap: 10px; /* Reduce gap for smaller screens */
+        justify-content: flex-start; /* Align icons to the start */
     }
 
     .icon-item {
         padding: 10px;
+        flex: 1 1 calc(33.33% - 20px); /* Three icons per row */
+        max-width: calc(33.33% - 20px);
     }
 
     .icon-item img {
