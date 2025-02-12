@@ -94,40 +94,48 @@ body {
 /* Fix for mobile navigation */
 @media (max-width: 768px) {
     .navigation {
-        padding: 10px 20px; /* Adjust padding for smaller screens */
+        padding: 5px; /* Adjust padding for smaller screens */
         flex-direction: column;
         align-items: flex-start;
+        width: auto;
+        height: auto;
     }
 
     .navigation .logo {
-        width: auto;
         display: flex;
         justify-content: flex-start;
         cursor: pointer;
+        font-size: 0.8rem; /* Make the logo text smaller */
     }
 
     .navigation .logo img {
-        display: block;
+        width: 60px; /* Make the logo image smaller */
     }
 
+    
     .navigation ul {
         flex-direction: column;
-        gap: 10px; /* Adjust gap for smaller screens */
-        width: 100%;
+        gap: 5px; /* Adjust gap for smaller screens */
+        width: 530px;
         max-height: 0;
         overflow: hidden;
+     
         transition: max-height 0.3s ease-in-out;
     }
 
     /* Show menu when active */
     .navigation ul.active {
         max-height: 500px; /* Adjust as needed */
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 2px;
+        padding: 12px;
+ 
     }
 
     .navigation a {
         font-size: 1rem; /* Adjust font size for smaller screens */
-        display: block;
-        padding: 10px 0;
+        font-size: 10px;
     }
 }
 
