@@ -130,7 +130,8 @@ body {
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 2px;
         padding: 12px;
- 
+        width: 100%; /* Ensure it doesn't expand beyond the screen width */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
     }
 
     .navigation a {
