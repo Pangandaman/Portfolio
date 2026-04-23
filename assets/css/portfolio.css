@@ -10,7 +10,13 @@ body {
     font-family: 'MarkPro', 'Helvetica', 'Arial', sans-serif;
     color: white;
 }
+html {
+  scroll-behavior: smooth;
+}
 
+#home{
+       background-image: url(../img/s.mp4);
+}
 .container {
     display: flex;
     flex-direction: column;
