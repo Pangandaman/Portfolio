@@ -56,21 +56,23 @@ export function Navbar() {
         <a href="#" className="text-foreground font-semibold text-lg tracking-tight">
           AMR<span className="text-foreground">.</span>
         </a>
-        <div className="hidden sm:flex items-center gap-6">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={cn(
-                "text-sm transition-colors duration-200",
-                activeSection === link.href
-                  ? "text-foreground font-medium"
-                  : "text-muted hover:text-foreground"
-              )}
-            >
-              {link.label}
-            </a>
-          ))}
+        <div className="flex items-center gap-6">
+          <div className="hidden sm:flex items-center gap-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className={cn(
+                  "text-sm transition-colors duration-200",
+                  activeSection === link.href
+                    ? "text-foreground font-medium"
+                    : "text-muted hover:text-foreground"
+                )}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
           <ThemeToggle />
         </div>
       </div>
