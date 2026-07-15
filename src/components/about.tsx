@@ -58,7 +58,7 @@ export function About() {
           <FadeIn delay={0.6}>
             <p className="text-foreground">
               Other than that, you'll probably find me 
-              watching movies from wayback 2000s-2010s, falling into random YouTube 
+              watching movies from way back 2000s-2010s, falling into random YouTube 
               rabbit holes, or playing League. 
               I've been gaming since the PlayStation 2 era, 
               and I really miss those golden days.

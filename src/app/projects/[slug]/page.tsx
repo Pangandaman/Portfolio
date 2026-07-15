@@ -6,15 +6,17 @@ import { projects } from "@/data/projects";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { FadeIn } from "@/components/fade-in";
-import { ArrowLeft, ExternalLink, CheckCircle } from "lucide-react";
+import { ArrowLeft, ExternalLink, CheckCircle, Eye } from "lucide-react";
 import { GithubIcon } from "@/components/icons";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import { useViews } from "@/lib/use-views";
 
 export default function ProjectPage() {
   const params = useParams();
   const slug = params.slug as string;
   const project = projects.find((p) => p.slug === slug);
+  const views = useViews(slug);
 
   if (!project) {
     notFound();
@@ -52,6 +54,12 @@ export default function ProjectPage() {
                 </span>
               </div>
               <p className="text-xl text-muted">{project.year}</p>
+              {views !== null && (
+                <p className="mt-2 text-sm text-muted flex items-center gap-1.5">
+                  <Eye className="w-4 h-4" />
+                  {views} view{views !== 1 ? "s" : ""}
+                </p>
+              )}
             </header>
           </FadeIn>
 
