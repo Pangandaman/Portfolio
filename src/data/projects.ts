@@ -220,7 +220,7 @@ export const projects: Project[] = [
     ],
 
    screenshots: [ 
-   { src: "/assets/img/intramurals/dashboard.jpg", alt: "AKIC Dashboard", caption: "I wish I can access the system but due to legacy environment and PHP version dependencies, all I have is a screenshot of the dashboard.", }, 
+   { src: "/assets/img/intramurals/dashboard.png", alt: "AKIC Dashboard", caption: "I wish I can access the system but due to legacy environment and PHP version dependencies, all I have is a screenshot of the dashboard.", }, 
    { src: "/assets/img/intramurals/hardbound.jpg", alt: "Hardbound", caption: "The hardbound thesis books in all its glory. 300 pages, 256 functions, countless revisions and dozens of diagrams later—it's finally done. Proof of the sleepless nights and relentless debugging that made this system a reality, I still can't believe I made it to the finish line! 🤣", }, 
    { src: "/assets/img/intramurals/award1.jpg", alt: "Hardbound", caption: "Programmer of the Year", }, 
    { src: "/assets/img/intramurals/award2.jpg", alt: "Hardbound", caption: "Best in Software Engineering Project", }, 
