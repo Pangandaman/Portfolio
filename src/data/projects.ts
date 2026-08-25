@@ -255,106 +255,108 @@ export const projects: Project[] = [
     ]
 
 },
- {
-  slug: "pickleball-court-management",
+  {
+   slug: "pickleball-court-management",
 
-  title: "Pickleball Court Management System",
+   title: "CourtFlow",
 
-  subtitle:
-    "A modern booking and management platform for pickleball courts, equipment rentals, and player transactions.",
+   subtitle:
+     "A multi-tenant court booking and operations management system for badminton, pickleball, tennis, study hubs, and other rentable spaces.",
 
-  description:
-    "A full-stack web application designed to help pickleball facilities manage court reservations, equipment rentals, customer bookings, and daily operations.",
+   description:
+     "CourtFlow centralizes reservations, payments, inventory, customer management, and business analytics into a single platform designed for facilities that rent out courts, rooms, or spaces.",
 
-  year: "2026",
+   year: "2026",
 
-  duration: "Ongoing",
+   duration: "2025 – 2026",
 
-  role: "Full Stack Developer",
+   role: "Full Stack Developer",
 
-  organization: "Personal Project",
+   organization: "Personal Project",
 
-  status: "In Progress",
+   status: "Completed",
 
-  github: "https://github.com/Pangandaman",
+   techStack: [
+     "Next.js",
+     "TypeScript",
+     "Tailwind CSS",
+     "Supabase",
+     "React",
+     "Vercel"
+   ],
 
-  techStack: [
-    "Next.js",
-    "TypeScript",
-    "Tailwind CSS",
-    "Supabase",
-    "React",
-    "Vercel"
-  ],
+   overview: {
+     title: "Project Overview",
+     content: [
+       "CourtFlow is my transition from legacy PHP development to modern full-stack web development.",
+       "It is a complete management platform for rentable facilities that simplifies reservations, inventory tracking, customer management, and payment processing.",
+       "Built with a multi-tenant architecture, it can serve multiple businesses from a single deployment."
+     ]
+   },
 
-  overview: {
-    title: "Project Overview",
-    content: [
-      "This project is my transition from legacy PHP development to modern full-stack web development.",
-      "The goal is to build a complete management platform for pickleball facilities that simplifies reservations, inventory tracking, customer management, and payment processing.",
-      "Unlike my college thesis, this project focuses on modern technologies and scalable architecture."
-    ]
-  },
+   challenge: {
+     title: "The Challenge",
+     content: [
+       "Managing a facility involves much more than booking a court.",
+       "Court availability, rental equipment, customer information, payments, inventory, and reporting all need to work together.",
+       "Designing a system where these modules communicate efficiently — while supporting multiple tenants — has been the biggest challenge."
+     ]
+   },
 
-  challenge: {
-    title: "The Challenge",
-    content: [
-      "Managing a sports facility involves much more than booking a court.",
-      "Court availability, rental equipment, customer information, payments, inventory, and reporting all need to work together.",
-      "Designing a system where these modules communicate efficiently has been the biggest challenge."
-    ]
-  },
+   journey: {
+     title: "Why I Built It",
+     content: [
+       "After graduating, I wanted a project that would push me beyond PHP and CodeIgniter.",
+       "Rather than following another tutorial, I decided to build something based on a real business workflow.",
+       "This project allowed me to learn React, Next.js, TypeScript, and Supabase while solving practical problems."
+     ]
+   },
 
-  journey: {
-    title: "Why I'm Building It",
-    content: [
-      "After graduating, I wanted a project that would push me beyond PHP and CodeIgniter.",
-      "Rather than following another tutorial, I decided to build something based on a real business workflow.",
-      "This project allows me to learn React, Next.js, TypeScript, and Supabase while solving practical problems."
-    ]
-  },
+   solution: {
+     title: "The Solution",
+     content: [
+       "CourtFlow provides a centralized dashboard where administrators can manage courts, bookings, equipment rentals, customers, and transactions.",
+       "The platform supports real-time monitoring, session timers, check-in/out workflows, refunds, add-ons, and business-level analytics.",
+       "Staff can be invited and assigned roles, and a full audit log tracks all actions for accountability."
+     ]
+   },
 
-  solution: {
-    title: "The Solution",
-    content: [
-      "The application provides a centralized dashboard where administrators can manage courts, bookings, equipment rentals, customers, and transactions.",
-      "Customers can reserve courts online, select rental equipment, and complete their bookings through a simple workflow."
-    ]
-  },
+   architecture: {
+     title: "Booking Flow",
+     content: [
+       "Customer → Select Court → Choose Date & Time → Add Rentals → Confirm Booking → Payment → Dashboard"
+     ]
+   },
 
-  architecture: {
-    title: "Booking Flow",
-    content: [
-      "Customer → Select Court → Choose Date & Time → Add Rentals → Confirm Booking → Payment → Dashboard"
-    ]
-  },
+   features: [
+     "Full booking lifecycle (CRUD, check-in/out, extend, transfer, refund, add-ons)",
+     "Court management with pricing, status, and maintenance tracking",
+     "Customer profiles with inline creation and booking history",
+     "Inventory system for consumables and rentals with low-stock alerts",
+     "Transaction records with search and date filters",
+     "Calendar views (month/day) with color-coded bookings",
+     "Live monitor with real-time court cards and quick actions",
+     "Dashboard with stats, pending alerts, active sessions, and court status",
+     "Business settings and staff management with role-based invites",
+     "Audit log with 17 action types, searchable and filterable"
+   ],
 
-  features: [
-    "Court Booking",
-    "Availability Calendar",
-    "Equipment Rental",
-    "Inventory Management",
-    "Customer Management",
-    "Transaction Records",
-    "Dashboard Analytics",
-    "Booking History"
-  ],
+   screenshots: [],
 
-  screenshots: [],
+   lessonsLearned: [
+     "Modern frameworks encourage reusable components and cleaner project structure.",
+     "TypeScript significantly improves development by catching errors early.",
+     "Planning the database before writing code saves time later.",
+     "Multi-tenant architecture requires careful data isolation from day one.",
+     "Building a real-world application is one of the best ways to learn a new technology stack."
+   ],
 
-  lessonsLearned: [
-    "Modern frameworks encourage reusable components and cleaner project structure.",
-    "TypeScript significantly improves development by catching errors early.",
-    "Planning the database before writing code saves time later.",
-    "Building a real-world application is one of the best ways to learn a new technology stack."
-  ],
-
-  futureImprovements: [
-    "Online payments",
-    "Email notifications",
-    "QR code check-in",
-    "Admin analytics dashboard",
-    "Mobile application"
-  ]
-}
+   futureImprovements: [
+     "Online payment gateway integration",
+     "Email and SMS notifications",
+     "QR code check-in",
+     "Public booking portal for customers",
+     "Mobile application"
+   ]
+ }
 ];
